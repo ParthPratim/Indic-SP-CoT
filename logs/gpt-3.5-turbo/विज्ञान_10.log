@@ -1,0 +1,47 @@
+collected 10 terms: ['गणित', 'रसायन', 'भौतिकी', 'जैव विज्ञान', 'भूगोल', 'आणुविज्ञान', 'खग', 'साण्ड', 'वीरस', 'आयलांड्स']
+========First Hop=========
+[2024/11/10 15:11:00] Processing term [गणित], progress 1/10
+[2024/11/10 15:11:02] Processing term [रसायन], progress 2/10
+[2024/11/10 15:11:03] Processing term [भौतिकी], progress 3/10
+[2024/11/10 15:11:04] Processing term [जैव विज्ञान], progress 4/10
+[2024/11/10 15:11:05] Processing term [भूगोल], progress 5/10
+[2024/11/10 15:11:06] Processing term [आणुविज्ञान], progress 6/10
+[2024/11/10 15:11:07] Processing term [खग], progress 7/10
+[2024/11/10 15:11:08] Processing term [साण्ड], progress 8/10
+[2024/11/10 15:11:10] Processing term [वीरस], progress 9/10
+[2024/11/10 15:11:11] Processing term [आयलांड्स], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========
+collected 10 terms: ['कृषि', 'आविष्कार', 'उपग्रह', 'खगोल विज्ञान', 'जैव विज्ञान', 'रसायन व', 'गणित', 'रसायन शास्त्र', 'भौतिकी', 'भूगोल']
+========First Hop=========
+[2024/11/10 15:15:52] Processing term [कृषि], progress 1/10
+[2024/11/10 15:15:53] Processing term [आविष्कार], progress 2/10
+[2024/11/10 15:15:53] Processing term [उपग्रह], progress 3/10
+[2024/11/10 15:15:54] Processing term [खगोल विज्ञान], progress 4/10
+[2024/11/10 15:15:55] Processing term [जैव विज्ञान], progress 5/10
+collected 10 terms: ['भौतिक विज्ञान', 'रसायन विज्ञान', 'गणितीय विज्ञान', 'जैविक विज्ञान', 'खगोलविज्ञान', 'रसायनशास्त्र', 'जैविकविज्ञान', 'भौतिकी', 'गणित', 'भ']
+========First Hop=========
+[2024/11/10 15:46:55] Processing term [भौतिक विज्ञान], progress 1/10
+[2024/11/10 15:46:56] Processing term [रसायन विज्ञान], progress 2/10
+[2024/11/10 15:46:56] Processing term [गणितीय विज्ञान], progress 3/10
+[2024/11/10 15:46:57] Processing term [जैविक विज्ञान], progress 4/10
+[2024/11/10 15:48:43] Processing term [खगोलविज्ञान], progress 5/10
+[2024/11/10 15:48:44] Processing term [रसायनशास्त्र], progress 6/10
+[2024/11/10 15:50:36] Processing term [जैविकविज्ञान], progress 7/10
+[2024/11/10 15:51:57] Processing term [भौतिकी], progress 8/10
+[2024/11/10 15:51:57] Processing term [गणित], progress 9/10
+[2024/11/10 15:51:58] Processing term [भ], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========

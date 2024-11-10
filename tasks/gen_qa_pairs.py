@@ -9,6 +9,9 @@ from copy import deepcopy
 from typing import Union
 import time
 import timeit
+from inltk.inltk import setup 
+setup('hi') 
+from inltk.inltk import tokenize
 
 # TOPICS = {'politicians': 40,
 #           'athletes': 20,
@@ -42,33 +45,36 @@ import timeit
 #           }
 
 
-TOPICS = {'\u0916\u0947\u0932' : 10, 
-'\u0938\u0902\u0917\u0940\u0924' : 10,
-'\u0915\u0932\u093e' : 10,
-'\u0936\u093f\u0915\u094d\u0937\u093e' : 10,
-'\u0935\u093f\u091c\u094d\u091e\u093e\u0928' : 10,
-'\u091a\u093f\u0915\u093f\u0924\u094d\u0938\u093e' : 10,
-'\u0907\u0924\u093f\u0939\u093e\u0938' : 10,
-'\u0930\u093e\u091c\u0928\u0940\u0924\u093f' : 10,
-'\u0927\u0930\u094d\u092e' : 10,
-'\u0905\u0930\u094d\u0925\u0936\u093e\u0938\u094d\u0924\u094d\u0930' : 10,
-'\u0924\u0915\u0928\u0940\u0915' : 10,
-'\u0938\u0902\u091a\u093e\u0930' : 10,
-'\u092a\u0930\u094d\u092f\u093e\u0935\u0930\u0923' : 10,
-'\u092d\u0942\u0917\u094b\u0932' : 10,
-'\u0915\u093e\u0928\u0942\u0928\u0940 \u092a\u094d\u0930\u0923\u093e\u0932\u0940' : 10,
-'\u0938\u093e\u092e\u093e\u091c\u093f\u0915 \u0935\u094d\u092f\u0935\u0938\u094d\u0925\u093e' : 10,
-'\u092f\u0941\u0926\u094d\u0927' : 10,
-'\u0935\u094d\u092f\u093e\u092a\u093e\u0930' : 10,
-'\u0938\u0902\u0938\u094d\u0915\u0943\u0924\u093f' : 10,
-'\u092a\u0930\u094d\u092f\u091f' : 10
+TOPICS = {'खेल' : 10,
+'संगीत'  : 10,
+'कला'   : 10,
+'शिक्षा'  : 10,
+'विज्ञान' : 10,
+'चिकित्सा' : 10,
+'इतिहास' : 10,
+'राजनीति' : 10,
+'धर्म' : 10,
+'अर्थशास्त्र' : 10,
+'तकनीक' : 10,
+'संचार' : 10,
+'पर्यावरण' : 10,
+'भूगोल' : 10,
+'कानूनी प्रणाली' : 10,
+'सामाजिक व्यवस्था' : 10,
+'युद्ध' : 10,
+'व्यापार'  : 10,
+'संस्कृति' : 10,
+'पर्यट' : 10,
           }
 
+FORMAT = "in Hindi, "
+
+gpt4 = ChatGPT(model_name="gpt-4o")
 
 def list_topic_terms(model: Union[APIModel, LocalModel], topic: str):
     # prompt = f"List some {topic}, separated by '|':\n"
-    prompt = f"List some {topic} separated by '|':"
-    print(f"List some {topic} separated by |:")
+    prompt = f"List some {topic} {FORMAT} separated by '|':"
+    print(f"List some {topic} {FORMAT} separated by |:")
     response = model.get_response(prompt, temperature=1.0, max_tokens=64)
     print(f"Response: {response}")
     terms = [it.strip() for it in response.split('|')]
@@ -85,18 +91,18 @@ def generate_passage_for_term(
 ):
     if template:
         example_term, example_passage = template["term"], template["passage"]
-        prompt = f"Generate a passage from Wikipedia about {example_term}:\n{example_passage}\n\n"
+        prompt = f"Generate a passage from Wikipedia {FORMAT} about {example_term}:\n{example_passage}\n\n"
     else:
         prompt = ""
 
     if detailed:
-        prompt += f"Generate a detailed passage from Wikipedia about {term}:"
+        prompt += f"Generate a detailed passage from Wikipedia {FORMAT} about {term}:"
     else:
-        prompt += f"Generate a passage from Wikipedia about {term}:"
+        prompt += f"Generate a passage from Wikipedia {FORMAT} about {term}:"
     raw_passage = model.get_response(prompt, temperature=temperature, max_tokens=max_tokens)
 
     # remove the incomplete sentence at the end
-    raw_sentences = nltk.sent_tokenize(raw_passage)
+    raw_sentences = tokenize(raw_passage ,'hi')
     sentences = deepcopy(raw_sentences[:-1]) if not raw_sentences[-1].endswith('.') else deepcopy(raw_sentences)
     passage = ' '.join(sentences)
 
@@ -107,21 +113,16 @@ def extract_entities_in_passage(
         model: APIModel,
         passage: str,
         max_tokens: int = 128,
-        extractor: str = "spacy-nltk",
+        extractor: str = "llm-gpt4",
         ban_entity_list: List[str] = None,
 ):
     # extract entities
     all_entities = []
-    if "spacy" in extractor:
-        doc = nlp(passage)
-        entities_spacy = [clean_entity(ent.text) for ent in doc.ents if ent.label_ in ['PERSON', 'ORG', 'GPE', 'LOC', 'DATE']]
-        entities_spacy = [ent for ent in entities_spacy if ent is not None]
-        all_entities += entities_spacy
 
     # entity_source_2
     if "llm" in extractor:
         prompt_extract_entity = f"Passage:\n{passage}\n\n" \
-                                f"Extract the named entities (like date, location, organization, character, number) in the above passage, entities should be separated by '|'." \
+                                f"Extract the named entities (like date, location, organization, character, number) in {FORMAT} from the above passage, entities should be separated by '|'." \
                                 f"If no named entity in it, return 'None' only."
         raw_entities_by_llm = model.get_response(prompt_extract_entity, temperature=0.0, max_tokens=max_tokens)
 
@@ -130,11 +131,15 @@ def extract_entities_in_passage(
         all_entities += entities_llm
 
     # entity_source_3
-    if "nltk" in extractor:
-        entities_nltk = process_an_item(passage)
-        entities_nltk = [clean_entity(ent) for ent in entities_nltk]
-        entities_nltk = [ent for ent in entities_nltk if ent is not None]
-        all_entities += entities_nltk
+    if "gpt4" in extractor:
+        prompt_extract_entity = f"Passage:\n{passage}\n\n" \
+                                f"Extract the named entities (like date, location, organization, character, number) in {FORMAT} from the above passage, entities should be separated by '|'." \
+                                f"If no named entity in it, return 'None' only."
+        raw_entities_by_llm = model.get_response(prompt_extract_entity, temperature=0.0, max_tokens=max_tokens)
+
+        entities_llm = [clean_entity(ent) for ent in raw_entities_by_llm.split('|')]
+        entities_llm = [ent for ent in entities_llm if ent is not None]
+        all_entities += entities_llm
 
     entities = [[], []]
     for rent in all_entities:
@@ -233,10 +238,10 @@ def generate_qae_pair_for_entity(
     # generate question
     if title_in_question:
         prompt_generate_question += f"Passage about {title}:\n{passage}\n\n" \
-                                    f"Generate a question that meets the following conditions: 1. contains the term '{title}' in question, 2. the answer is '{expected_answer}'."
+                                    f"Generate a question {FORMAT} that meets the following conditions: 1. contains the term '{title}' in question, 2. the answer is '{expected_answer}'."
     else:
         prompt_generate_question += f"Passage about {title}:\n{passage}\n\n" \
-                                    f"Generate a question to which the answer is the entity '{expected_answer}'."
+                                    f"Generate a question {FORMAT} to which the answer is the entity '{expected_answer}'."
 
     if ban_entity_list:
         prompt_generate_question += f"(Avoid the following entities in the question: {', '.join(ban_entity_list)})."
@@ -256,7 +261,7 @@ def generate_qae_pair_for_entity(
                                           ban_pronoun=True)
             num_retry += 1
 
-    prompt_generate_answer += f"Passage about {title}:\n{passage}\n\nQuestion:\n{question}\n\nExtract the answer directly from the passage in less words as possible."
+    prompt_generate_answer += f"Passage about {title}:\n{passage}\n\nQuestion:\n{question}\n\nExtract the answer {FORMAT} directly from the passage in as less words as possible."
     raw_answer = model.get_response(prompt_generate_answer, temperature=0.0, max_tokens=answer_tokens)
 
     num_retry = 0
@@ -275,7 +280,7 @@ def generate_qae_pair_for_entity(
     #                            f"{answer} must in the explanation."
 
     prompt_generate_explanation += f"Passage about {title}:\n{passage}\n\nQuestion:\n{question}\n\nAnswer:\n{answer}\n\n" \
-                                   f"According to an evidence from the passage to support the answer, rewrite it to make its meaning clear without passage."
+                                   f"According to an evidence from the passage to support the answer, rewrite it {FORMAT} to make its meaning clear without passage."
 
     # prompt_generate_explanation += f"Passage:\n{passage}\n\nQuestion:\n{question}\n\nAnswer:\n{answer}\n\n" \
     #                                f"According to the passage, write a short explanation for the answer."
@@ -308,7 +313,7 @@ def generate_qa_pairs_for_passage(
         question_tokens: int = 64,
         answer_tokens: int = 10,
         explanation_tokens: int = 128,
-        extractor: str = "nltk-spacy",
+        extractor: str = "llm-gpt4",
         max_qae_pairs: int = 10
 ):
     # extract entities
@@ -359,7 +364,7 @@ def generate_examples_for_topic(
         question_tokens: int = 64,
         answer_tokens: int = 10,
         explanation_tokens: int = 128,
-        extractor: str = "nltk-spacy",
+        extractor: str = "llm-gpt4",
         max_qae_pairs: int = 10,
         topic_cate: str = None,
 ):
@@ -420,7 +425,7 @@ def generate_base_quadruples(
         answer_tokens: int = 10,
         explanation_tokens: int = 128,
         num_questions_per_paragraph: int = 2,
-        entity_extractor: str = "nltk-spacy"
+        entity_extractor: str = "llm-gpt4"
 ):
     # generate long and detailed passage
     passage = generate_passage_for_term(
@@ -431,7 +436,7 @@ def generate_base_quadruples(
     )
 
     paragraphs = []
-    sentences = nltk.sent_tokenize(passage)
+    sentences = tokenize(passage ,'hi')
 
     for i in range(0, len(sentences), 2):
         paragraphs.append(" ".join(sentences[i:i + 2]))
@@ -494,29 +499,6 @@ def generate_base_quadruples(
     return output
 
 
-def extract_entities_and_labels_spacy(
-        passage: str,
-        ban_entity_list: List[str] = None,
-):
-    doc = nlp(passage)
-    entities = [clean_entity(ent.text) for ent in doc.ents]
-    labels = [ent.label_ for ent in doc.ents]
-
-    if ban_entity_list:
-        final_entities, final_labels = [], []
-        lemma_final_entities = [lemmatize(ent) for ent in entities]
-        lemma_ban_entity_list = [lemmatize(ent) for ent in ban_entity_list]
-        block_entities = [normalize_answer(ent) for ent in lemma_ban_entity_list]
-        for i in range(len(entities)):
-            if normalize_answer(lemma_final_entities[i]) not in block_entities:
-                final_entities.append(entities[i])
-                final_labels.append(labels[i])
-        entities = final_entities
-        labels = final_labels
-
-    return entities, labels
-
-
 def generate_multi_hop_quadruples(
         model: APIModel,
         term: str,
@@ -526,7 +508,7 @@ def generate_multi_hop_quadruples(
         explanation_tokens: int = 128,
         num_entity_per_paragraph: int = 2,
         min_passage_tokens: int = 128,
-        entity_extractor: str = "spacy",
+        entity_extractor: str = "gpt4",
         question_ban_list: List[str] = None,
         answer_ban_list: List[str] = None,
         detailed: bool = False,
@@ -537,22 +519,29 @@ def generate_multi_hop_quadruples(
         # print(f"Term {term} is a date, skip it.")
         return None
 
+    print("Check1 done")
+
     # filter out terms that are numbers
     if re.match(r"\d+$", normalize_answer(term)) is not None:
         # print(f"Term {term} is a number, skip it.")
         return None
+    
+    print("Checks done")
 
-    for e in ["million", "trillion", "billion", "hundred", "thousand"]:
+    for e in ["मिलियन", "ट्रिलियन", "बिलियन", "सौ", "हज़ार"]:
         if e in term:
             return None
 
     # refuse to generate passage for [QUANTITY, ORDINAL, CARDINAL, PERCENT, MONEY, DATE, TIME]
-    input_entities = nlp(term)
-    for ent in input_entities.ents:
-        if ent.label_ in ["QUANTITY", "ORDINAL", "CARDINAL", "PERCENT", "MONEY", "DATE", "TIME"]:
-            # print(f"Term {term} is a {ent.label_}, skip it.")
-            return None
+    ie_prompt = f"Term : {term}"\
+                f"Return single word 'True' if any of the named entities in the term are of type : मात्रा or रमवाचक or कार्डिनल or रतिशत or धन or तारीख़ or समय"\
+                f"Or return single word 'False'"
+    input_entities = model.get_response(ie_prompt, temperature=0.0, max_tokens=64) 
+    
+    if input_entities == 'True':
+        return None
 
+    
     # generate long and detailed passage
     passage = generate_passage_for_term(
         model=model,
@@ -566,7 +555,7 @@ def generate_multi_hop_quadruples(
         return None
 
     paragraphs = []
-    sentences = nltk.sent_tokenize(passage)
+    sentences = tokenize(passage ,'hi')
 
     for i in range(0, len(sentences), 2):
         paragraphs.append(" ".join(sentences[i:i + 2]))
@@ -674,7 +663,7 @@ def generate_quadruples_for_term(
     )
 
     paragraphs = []
-    sentences = nltk.sent_tokenize(passage)
+    sentences = tokenize(passage ,'hi')
 
     for i in range(0, len(sentences), 2):
         paragraphs.append(" ".join(sentences[i:i + 2]))
@@ -880,7 +869,7 @@ def main(args):
     logger = open(args.log, "a")
 
     # init model
-    if args.model_name in ["gpt-3.5-turbo-0301", "gpt-3.5-turbo"]:
+    if args.model_name in ["gpt-3.5-turbo-0301", "gpt-3.5-turbo", "gpt-4o"]:
         model = ChatGPT(model_name=args.model_name)
     elif args.model_name in ["text-davinci-002", "text-davinci-003"]:
         model = CompleteGPT(model_name=args.model_name)

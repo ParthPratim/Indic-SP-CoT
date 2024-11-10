@@ -1,0 +1,83 @@
+collected 10 terms: ['चित्रकला', 'संगीतकला', 'नृत्यकला', 'शिल्पकला', 'संजीवनीकला', 'शस्त्रकला', 'स', "Sure, here are some forms of art commonly seen in Indian culture, separated by '", "':\n\n1. शिल्पकला", 'sculpture\n2. रंगमंचकला']
+========First Hop=========
+[2024/11/10 15:05:17] Processing term [चित्रकला], progress 1/10
+[2024/11/10 15:05:18] Processing term [संगीतकला], progress 2/10
+[2024/11/10 15:05:19] Processing term [नृत्यकला], progress 3/10
+[2024/11/10 15:05:21] Processing term [शिल्पकला], progress 4/10
+[2024/11/10 15:05:22] Processing term [संजीवनीकला], progress 5/10
+[2024/11/10 15:05:23] Processing term [शस्त्रकला], progress 6/10
+[2024/11/10 15:05:24] Processing term [स], progress 7/10
+[2024/11/10 15:05:25] Processing term [Sure, here are some forms of art commonly seen in Indian culture, separated by '], progress 8/10
+[2024/11/10 15:05:26] Processing term [':
+
+1. शिल्पकला], progress 9/10
+[2024/11/10 15:05:27] Processing term [sculpture
+2. रंगमंचकला], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========
+collected 10 terms: ['कला', 'चित्रकला', 'संगीत', 'नृत्य', 'राग', 'शैली', 'सिपाही', 'पर्टी', 'संगठन', 'चरित']
+========First Hop=========
+[2024/11/10 15:10:24] Processing term [कला], progress 1/10
+[2024/11/10 15:10:26] Processing term [चित्रकला], progress 2/10
+[2024/11/10 15:10:27] Processing term [संगीत], progress 3/10
+[2024/11/10 15:10:28] Processing term [नृत्य], progress 4/10
+[2024/11/10 15:10:29] Processing term [राग], progress 5/10
+[2024/11/10 15:10:31] Processing term [शैली], progress 6/10
+[2024/11/10 15:10:32] Processing term [सिपाही], progress 7/10
+[2024/11/10 15:10:33] Processing term [पर्टी], progress 8/10
+[2024/11/10 15:10:34] Processing term [संगठन], progress 9/10
+[2024/11/10 15:10:35] Processing term [चरित], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========
+collected 10 terms: ['कला', 'शिल्प', 'संगीत', 'नृत्य', 'साहित्य', 'चित्रकला', 'कविता', 'नाट्यशास्त्र', 'सिंगिंग', 'गायन']
+========First Hop=========
+[2024/11/10 15:15:27] Processing term [कला], progress 1/10
+[2024/11/10 15:15:27] Processing term [शिल्प], progress 2/10
+[2024/11/10 15:15:28] Processing term [संगीत], progress 3/10
+[2024/11/10 15:15:28] Processing term [नृत्य], progress 4/10
+[2024/11/10 15:15:29] Processing term [साहित्य], progress 5/10
+[2024/11/10 15:15:29] Processing term [चित्रकला], progress 6/10
+[2024/11/10 15:15:30] Processing term [कविता], progress 7/10
+[2024/11/10 15:15:30] Processing term [नाट्यशास्त्र], progress 8/10
+[2024/11/10 15:15:31] Processing term [सिंगिंग], progress 9/10
+[2024/11/10 15:15:32] Processing term [गायन], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========
+collected 10 terms: ['साहित्य', 'शिल्पकला', 'संगीत', 'नृत्य', 'चित्रकला', 'कारुणिकता', 'रचनात्मकस्व', 'कला: क', 'ल', 'ा']
+========First Hop=========
+[2024/11/10 15:37:44] Processing term [साहित्य], progress 1/10
+[2024/11/10 15:37:44] Processing term [शिल्पकला], progress 2/10
+[2024/11/10 15:39:55] Processing term [संगीत], progress 3/10
+[2024/11/10 15:41:25] Processing term [नृत्य], progress 4/10
+[2024/11/10 15:41:25] Processing term [चित्रकला], progress 5/10
+[2024/11/10 15:41:26] Processing term [कारुणिकता], progress 6/10
+[2024/11/10 15:41:26] Processing term [रचनात्मकस्व], progress 7/10
+[2024/11/10 15:41:27] Processing term [कला: क], progress 8/10
+[2024/11/10 15:41:27] Processing term [ल], progress 9/10
+[2024/11/10 15:41:28] Processing term [ा], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========

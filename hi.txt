@@ -1,0 +1,21 @@
+Text: द्र
+Type: LOC
+---
+Text: म
+Type: LOC
+---
+Text: ो
+Type: LOC
+---
+Text: दीनआज
+Type: LOC
+---
+Text: भारतीय
+Type: PER
+---
+Text: ट
+Type: PER
+---
+Text: ाट
+Type: PER
+---

@@ -1,0 +1,64 @@
+collected 10 terms: ['शिक्षा', 'Knowledge\nविद्या', 'Education\nज्ञान', 'Wisdom', 'लेखन', 'गणित', 'विज्ञान', 'साहित्य', 'समाजशास्त्र', 'अर्थशास्त्र']
+========First Hop=========
+[2024/11/10 15:10:42] Processing term [शिक्षा], progress 1/10
+[2024/11/10 15:10:43] Processing term [Knowledge
+विद्या], progress 2/10
+[2024/11/10 15:10:44] Processing term [Education
+ज्ञान], progress 3/10
+[2024/11/10 15:10:46] Processing term [Wisdom], progress 4/10
+[2024/11/10 15:10:47] Processing term [लेखन], progress 5/10
+[2024/11/10 15:10:48] Processing term [गणित], progress 6/10
+[2024/11/10 15:10:49] Processing term [विज्ञान], progress 7/10
+[2024/11/10 15:10:50] Processing term [साहित्य], progress 8/10
+[2024/11/10 15:10:51] Processing term [समाजशास्त्र], progress 9/10
+[2024/11/10 15:10:52] Processing term [अर्थशास्त्र], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========
+collected 10 terms: ['शिक्षा', 'अध्ययन', 'विद्या', 'अभ्यास', 'पाठ्य', 'गुरुकुल', 'विद्यालय', 'मान', 'सिक्षा', 'तालिम']
+========First Hop=========
+[2024/11/10 15:15:40] Processing term [शिक्षा], progress 1/10
+[2024/11/10 15:15:40] Processing term [अध्ययन], progress 2/10
+[2024/11/10 15:15:41] Processing term [विद्या], progress 3/10
+[2024/11/10 15:15:41] Processing term [अभ्यास], progress 4/10
+[2024/11/10 15:15:42] Processing term [पाठ्य], progress 5/10
+[2024/11/10 15:15:42] Processing term [गुरुकुल], progress 6/10
+[2024/11/10 15:15:43] Processing term [विद्यालय], progress 7/10
+[2024/11/10 15:15:44] Processing term [मान], progress 8/10
+[2024/11/10 15:15:44] Processing term [सिक्षा], progress 9/10
+[2024/11/10 15:15:45] Processing term [तालिम], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========
+collected 10 terms: ['शिक्षा', 'अध्ययन', 'विद्या', 'ज्ञान', 'संस्कृति', 'विद्यालय', 'शिक्षक', 'छात्र', 'पुस्तक', 'पाठशाला']
+========First Hop=========
+[2024/11/10 15:42:34] Processing term [शिक्षा], progress 1/10
+[2024/11/10 15:42:34] Processing term [अध्ययन], progress 2/10
+[2024/11/10 15:42:35] Processing term [विद्या], progress 3/10
+[2024/11/10 15:42:35] Processing term [ज्ञान], progress 4/10
+[2024/11/10 15:42:36] Processing term [संस्कृति], progress 5/10
+[2024/11/10 15:43:48] Processing term [विद्यालय], progress 6/10
+[2024/11/10 15:45:20] Processing term [शिक्षक], progress 7/10
+[2024/11/10 15:46:40] Processing term [छात्र], progress 8/10
+[2024/11/10 15:46:41] Processing term [पुस्तक], progress 9/10
+[2024/11/10 15:46:41] Processing term [पाठशाला], progress 10/10
+
+
+
+========Second Hop=========
+[2024/11/10 15:46:42] Processing [विद्यालय] qae_pairs, progress 0/1...
+[2024/11/10 15:46:42] generating second hop for छात्र, progress 0/1...
+
+
+
+========End=========

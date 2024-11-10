@@ -1,0 +1,42 @@
+collected 10 terms: ['दवाएँ', 'रोग', 'उपचार', 'विशेषज्ञ', 'आधुनिक', 'प्रौद्योगिकी', 'चिकित', 'चिकित्सा', 'डॉक्टर', 'नर्स']
+========First Hop=========
+[2024/11/10 15:11:18] Processing term [दवाएँ], progress 1/10
+[2024/11/10 15:11:19] Processing term [रोग], progress 2/10
+[2024/11/10 15:11:21] Processing term [उपचार], progress 3/10
+[2024/11/10 15:11:22] Processing term [विशेषज्ञ], progress 4/10
+[2024/11/10 15:11:23] Processing term [आधुनिक], progress 5/10
+[2024/11/10 15:11:24] Processing term [प्रौद्योगिकी], progress 6/10
+[2024/11/10 15:11:25] Processing term [चिकित], progress 7/10
+[2024/11/10 15:11:26] Processing term [चिकित्सा], progress 8/10
+[2024/11/10 15:11:27] Processing term [डॉक्टर], progress 9/10
+[2024/11/10 15:11:28] Processing term [नर्स], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========
+collected 10 terms: ['चिकित्सा', 'उपचार', 'डाक्टर', 'विशेषज्ञ', 'स्वास्थ्य', 'औषधि', 'रोग', 'व', 'डॉक्टर', 'दवा']
+========First Hop=========
+[2024/11/10 15:52:12] Processing term [चिकित्सा], progress 1/10
+[2024/11/10 15:54:17] Processing term [उपचार], progress 2/10
+[2024/11/10 15:54:18] Processing term [डाक्टर], progress 3/10
+[2024/11/10 15:55:56] Processing term [विशेषज्ञ], progress 4/10
+[2024/11/10 15:55:57] Processing term [स्वास्थ्य], progress 5/10
+[2024/11/10 15:57:16] Processing term [औषधि], progress 6/10
+[2024/11/10 15:57:17] Processing term [रोग], progress 7/10
+[2024/11/10 15:57:18] Processing term [व], progress 8/10
+[2024/11/10 15:57:18] Processing term [डॉक्टर], progress 9/10
+[2024/11/10 15:58:49] Processing term [दवा], progress 10/10
+
+
+
+========Second Hop=========
+[2024/11/10 15:58:50] Processing [डाक्टर] qae_pairs, progress 0/1...
+[2024/11/10 15:58:50] generating second hop for स्वास्थ्य, progress 0/1...
+
+
+
+========End=========

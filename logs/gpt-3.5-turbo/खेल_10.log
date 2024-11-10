@@ -1,0 +1,206 @@
+collected 10 terms: ['क्रिकेट', 'हॉकी', 'फुटबॉल', 'बैडमिंटन', 'कबड्डी', 'टेनिस', 'चेस', 'बॉक', 'वॉलीबॉल', 'कब']
+========First Hop=========
+[2024/11/10 14:55:13] Processing term [क्रिकेट], progress 1/10
+collected 10 terms: ['क्रिकेट', 'हॉकी', 'फुटबॉल', 'बैडमिंटन', 'टेनिस', 'वॉलीबॉल', 'बास्केट', 'I am not sure about the specific context of "खेल" you are referring to. "खेल" can mean "sports" in Hindi. Some popular sports in India are क्रिकेट', '', "I'm sorry, but I am not programmed to understand or provide information in Hindi. If you could provide the question in English, I would be happy to help with your request."]
+========First Hop=========
+[2024/11/10 15:04:42] Processing term [क्रिकेट], progress 1/10
+[2024/11/10 15:04:43] Processing term [हॉकी], progress 2/10
+[2024/11/10 15:04:44] Processing term [फुटबॉल], progress 3/10
+[2024/11/10 15:04:45] Processing term [बैडमिंटन], progress 4/10
+[2024/11/10 15:04:46] Processing term [टेनिस], progress 5/10
+[2024/11/10 15:04:48] Processing term [वॉलीबॉल], progress 6/10
+[2024/11/10 15:04:49] Processing term [बास्केट], progress 7/10
+[2024/11/10 15:04:50] Processing term [I am not sure about the specific context of "खेल" you are referring to. "खेल" can mean "sports" in Hindi. Some popular sports in India are क्रिकेट], progress 8/10
+[2024/11/10 15:04:52] Processing term [], progress 9/10
+[2024/11/10 15:04:52] Processing term [I'm sorry, but I am not programmed to understand or provide information in Hindi. If you could provide the question in English, I would be happy to help with your request.], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========
+collected 10 terms: ['क्रिकेट', 'हॉकी', 'फुटबॉल', 'टेनिस', 'बैडमिंटन', 'वॉलीबॉल', 'चालाकी', '', 'कबड्डी', 'बास्केटबॉल']
+========First Hop=========
+[2024/11/10 15:08:26] Processing term [क्रिकेट], progress 1/10
+[2024/11/10 15:08:27] Processing term [हॉकी], progress 2/10
+[2024/11/10 15:08:28] Processing term [फुटबॉल], progress 3/10
+[2024/11/10 15:08:30] Processing term [टेनिस], progress 4/10
+[2024/11/10 15:08:31] Processing term [बैडमिंटन], progress 5/10
+[2024/11/10 15:08:32] Processing term [वॉलीबॉल], progress 6/10
+[2024/11/10 15:08:33] Processing term [चालाकी], progress 7/10
+[2024/11/10 15:08:34] Processing term [], progress 8/10
+[2024/11/10 15:08:35] Processing term [कबड्डी], progress 9/10
+[2024/11/10 15:08:36] Processing term [बास्केटबॉल], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========
+collected 10 terms: ['क्रिकेट', 'हॉकी', 'फुटबॉल', 'बास्केटबॉल', 'बैडमिंटन', 'टेनिस', 'वॉली', 'वोली', 'तेनिस', 'वालीवालि']
+========First Hop=========
+[2024/11/10 15:09:51] Processing term [क्रिकेट], progress 1/10
+[2024/11/10 15:09:52] Processing term [हॉकी], progress 2/10
+[2024/11/10 15:09:53] Processing term [फुटबॉल], progress 3/10
+[2024/11/10 15:09:54] Processing term [बास्केटबॉल], progress 4/10
+[2024/11/10 15:09:55] Processing term [बैडमिंटन], progress 5/10
+[2024/11/10 15:09:56] Processing term [टेनिस], progress 6/10
+[2024/11/10 15:09:57] Processing term [वॉली], progress 7/10
+[2024/11/10 15:09:58] Processing term [वोली], progress 8/10
+[2024/11/10 15:09:59] Processing term [तेनिस], progress 9/10
+[2024/11/10 15:10:00] Processing term [वालीवालि], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========
+collected 10 terms: ['क्रिकेट', 'हॉकी', 'कबड्डी', 'फुटबॉल', 'टेनिस', 'बास्केटबॉल', 'वॉलीबॉ', 'बैडमिंटन', 'गोल्फ', 'वॉलीबॉल']
+========First Hop=========
+[2024/11/10 15:13:15] Processing term [क्रिकेट], progress 1/10
+[2024/11/10 15:13:16] Processing term [हॉकी], progress 2/10
+[2024/11/10 15:13:17] Processing term [कबड्डी], progress 3/10
+[2024/11/10 15:13:18] Processing term [फुटबॉल], progress 4/10
+[2024/11/10 15:13:19] Processing term [टेनिस], progress 5/10
+[2024/11/10 15:13:20] Processing term [बास्केटबॉल], progress 6/10
+[2024/11/10 15:13:22] Processing term [वॉलीबॉ], progress 7/10
+[2024/11/10 15:13:23] Processing term [बैडमिंटन], progress 8/10
+[2024/11/10 15:13:24] Processing term [गोल्फ], progress 9/10
+[2024/11/10 15:13:26] Processing term [वॉलीबॉल], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========
+collected 10 terms: ['क्रिकेट', 'हॉकी', 'फुटबॉल', 'बास्केटबॉल', 'टेनिस', 'बैडमिंटन', 'कबड', 'गोल्फ', 'कबड्डी', 'वॉलीबॉ']
+========First Hop=========
+[2024/11/10 15:14:21] Processing term [क्रिकेट], progress 1/10
+[2024/11/10 15:14:22] Processing term [हॉकी], progress 2/10
+[2024/11/10 15:14:23] Processing term [फुटबॉल], progress 3/10
+collected 10 terms: ['क्रिकेट', 'हॉकी', 'फुटबॉल', 'टेनिस', 'बास्केटबॉल', 'बैडमिंटन', 'गोल्फ', 'तेनिस', 'कबड्ड', 'कबड्डी']
+========First Hop=========
+[2024/11/10 15:14:46] Processing term [क्रिकेट], progress 1/10
+[2024/11/10 15:14:47] Processing term [हॉकी], progress 2/10
+[2024/11/10 15:14:47] Processing term [फुटबॉल], progress 3/10
+[2024/11/10 15:14:48] Processing term [टेनिस], progress 4/10
+collected 10 terms: ['क्रिकेट', 'हॉकी', 'फुटबॉल', 'टेनिस', 'बास्केटबॉल', 'वॉलीबॉल', 'बैडम', 'बैडमिंटन', 'वॉली', '']
+========First Hop=========
+[2024/11/10 15:15:00] Processing term [क्रिकेट], progress 1/10
+[2024/11/10 15:15:01] Processing term [हॉकी], progress 2/10
+[2024/11/10 15:15:01] Processing term [फुटबॉल], progress 3/10
+[2024/11/10 15:15:02] Processing term [टेनिस], progress 4/10
+[2024/11/10 15:15:02] Processing term [बास्केटबॉल], progress 5/10
+[2024/11/10 15:15:03] Processing term [वॉलीबॉल], progress 6/10
+[2024/11/10 15:15:04] Processing term [बैडम], progress 7/10
+[2024/11/10 15:15:04] Processing term [बैडमिंटन], progress 8/10
+[2024/11/10 15:15:04] Processing term [वॉली], progress 9/10
+[2024/11/10 15:15:05] Processing term [], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========
+collected 10 terms: ['क्रिकेट', 'हॉकी', 'फुटबॉल', 'बास्केटबॉल', 'वॉलीबॉल', 'खो-खो', 'कबड', 'टेनिस', 'बैडमिंटन', 'वाली']
+========First Hop=========
+[2024/11/10 15:16:04] Processing term [क्रिकेट], progress 1/10
+[2024/11/10 15:16:04] Processing term [हॉकी], progress 2/10
+[2024/11/10 15:16:05] Processing term [फुटबॉल], progress 3/10
+[2024/11/10 15:16:05] Processing term [बास्केटबॉल], progress 4/10
+[2024/11/10 15:16:06] Processing term [वॉलीबॉल], progress 5/10
+[2024/11/10 15:16:07] Processing term [खो-खो], progress 6/10
+[2024/11/10 15:16:07] Processing term [कबड], progress 7/10
+[2024/11/10 15:16:08] Processing term [टेनिस], progress 8/10
+[2024/11/10 15:16:09] Processing term [बैडमिंटन], progress 9/10
+[2024/11/10 15:16:09] Processing term [वाली], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========
+collected 10 terms: ['क्रिकेट', 'हॉकी', 'फुटबॉल', 'टेनिस', 'बास्केटबॉल', 'बैडमिंटन', 'मुक्क', 'वॉलीबॉल', 'बैडम', 'भारतीय रेस्टलिंग']
+========First Hop=========
+[2024/11/10 15:16:58] Processing term [क्रिकेट], progress 1/10
+collected 10 terms: ['क्रिकेट', 'हॉकी', 'फुटबॉल', 'बास्केटबोल', 'टेनिस', 'बैडमिंटन', 'गोल्फ', '', 'कबड्डी', 'बास्केटबॉल']
+========First Hop=========
+[2024/11/10 15:23:42] Processing term [क्रिकेट], progress 1/10
+collected 10 terms: ['फुटबॉल', 'क्रिकेट', 'हॉकी', 'टेनिस', 'बास्केटबॉल', 'बैडमिंटन', 'कबड', 'गोल्फ', 'वॉलीबॉल', 'बैडम']
+========First Hop=========
+[2024/11/10 15:25:11] Processing term [फुटबॉल], progress 1/10
+[2024/11/10 15:26:59] Processing term [क्रिकेट], progress 2/10
+[2024/11/10 15:28:11] Processing term [हॉकी], progress 3/10
+[2024/11/10 15:29:35] Processing term [टेनिस], progress 4/10
+[2024/11/10 15:29:36] Processing term [बास्केटबॉल], progress 5/10
+[2024/11/10 15:31:24] Processing term [बैडमिंटन], progress 6/10
+[2024/11/10 15:33:05] Processing term [कबड], progress 7/10
+[2024/11/10 15:33:06] Processing term [गोल्फ], progress 8/10
+[2024/11/10 15:33:06] Processing term [वॉलीबॉल], progress 9/10
+[2024/11/10 15:34:32] Processing term [बैडम], progress 10/10
+
+
+
+========Second Hop=========
+[2024/11/10 15:34:32] Processing [बास्केटबॉल] qae_pairs, progress 0/2...
+[2024/11/10 15:34:32] generating second hop for पांच, progress 0/2...
+[2024/11/10 15:34:33] generating second hop for सेंटर, progress 1/2...
+[2024/11/10 15:34:33] Processing [वॉलीबॉल] qae_pairs, progress 1/2...
+[2024/11/10 15:34:33] generating second hop for १८९५, progress 0/2...
+[2024/11/10 15:34:33] generating second hop for मोर्गन, progress 1/2...
+
+
+
+========End=========
+collected 10 terms: ['क्रिकेट', 'हॉकी', 'फुटबॉल', 'तेनिस', 'बास्केटबॉल', 'वॉलीबॉल', 'बैडम', 'टेनिस', 'बैडमिंटन', 'कबड']
+========First Hop=========
+[2024/11/10 16:49:42] Processing term [क्रिकेट], progress 1/10
+[2024/11/10 16:50:56] Processing term [हॉकी], progress 2/10
+[2024/11/10 16:51:52] Processing term [फुटबॉल], progress 3/10
+[2024/11/10 16:51:56] Processing term [तेनिस], progress 4/10
+[2024/11/10 16:51:56] Processing term [बास्केटबॉल], progress 5/10
+[2024/11/10 16:51:59] Processing term [वॉलीबॉल], progress 6/10
+[2024/11/10 16:52:59] Processing term [बैडम], progress 7/10
+[2024/11/10 16:53:00] Processing term [टेनिस], progress 8/10
+[2024/11/10 16:53:00] Processing term [बैडमिंटन], progress 9/10
+[2024/11/10 16:54:18] Processing term [कबड], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========
+collected 10 terms: ['क्रिकेट', 'हॉकी', 'फुटबॉल', 'टेनिस', 'बैडमिंटन', 'वॉलीबॉल', 'बास्केट', 'बास्केटबॉल', 'वॉली', 'गोल्फ']
+========First Hop=========
+[2024/11/10 16:56:53] Processing term [क्रिकेट], progress 1/10
+[2024/11/10 16:56:53] Processing term [हॉकी], progress 2/10
+[2024/11/10 16:56:54] Processing term [फुटबॉल], progress 3/10
+[2024/11/10 16:56:55] Processing term [टेनिस], progress 4/10
+[2024/11/10 16:56:55] Processing term [बैडमिंटन], progress 5/10
+[2024/11/10 16:56:56] Processing term [वॉलीबॉल], progress 6/10
+[2024/11/10 16:56:56] Processing term [बास्केट], progress 7/10
+[2024/11/10 16:56:57] Processing term [बास्केटबॉल], progress 8/10
+[2024/11/10 16:56:58] Processing term [वॉली], progress 9/10
+[2024/11/10 16:56:58] Processing term [गोल्फ], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========

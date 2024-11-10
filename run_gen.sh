@@ -1,6 +1,6 @@
 export PYTHONPATH=$PYTHONPATH:../
 export TASK_PATH=tasks/gen_qa_pairs.py
-export MODEL=gpt-3.5-turbo-0301
+export MODEL=gpt-4o
 # export CUDA_VISIBLE_DEVICES=4
 
 ## Run self-generation for topic index 0

@@ -6,9 +6,9 @@ import asyncio
 
 
 API_KEY = os.getenv("OPENAI_API_KEY")
-openai.api_key = API_KEY
-API_BASE = os.getenv("OPENAI_API_BASE")
-openai.api_base = API_BASE
+openai.api_key = None
+API_BASE = os.getenv("OPENAI_API_BASE",None)
+openai.api_base = "https://api.openai.com/v1"
 
 
 
@@ -38,7 +38,7 @@ class ChatGPT(APIModel):
     def pack_message(prompt: str, role: str = "user", binary: bool = False):
         if binary:
             return [
-                {"role": "system", "content": "You should give answers as direct and short as possible. Your answer must be either 'true' or 'false'."},
+                {"role": "system", "content": "You should give answers as direct and short as possible. Your answer must be either 'true' or 'false'. "},
                 {"role": role, "content": prompt}
             ]
         else:
@@ -66,7 +66,7 @@ class ChatGPT(APIModel):
             message = self.pack_message(prompt, role=role, binary=True)
         else:
             message = self.pack_message(prompt, role=role)
-
+        
         if ban_pronoun:
             ban_token_ids = [1119, 1375, 679, 632, 770, 2312, 5334, 2332,
                              2399, 6363, 484, 673, 339, 340, 428, 777, 511,
@@ -89,6 +89,7 @@ class ChatGPT(APIModel):
                         presence_penalty=presence_penalty,
                         stop=stop,
                         logit_bias=logit_bias,
+                        
                     )
                     break
                 except:
@@ -106,8 +107,10 @@ class ChatGPT(APIModel):
                         presence_penalty=presence_penalty,
                         stop=stop,
                     )
+
                     break
-                except:
+                except Exception as e:
+                    print(e)
                     time.sleep(0.01)
 
         return response.choices[0].message.content if response else ""

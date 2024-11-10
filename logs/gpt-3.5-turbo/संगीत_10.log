@@ -1,0 +1,109 @@
+collected 10 terms: ['Classical', 'Pop', 'Rock', 'Hip hop', 'Country', 'Jazz', 'Electronic', 'Folk', 'Blues', 'Reggae']
+========First Hop=========
+[2024/11/10 14:55:18] Processing term [Classical], progress 1/10
+collected 10 terms: ['Classical music', 'Pop music', 'Hip hop', 'Jazz music', 'Rock music', 'Folk music', 'Classical', 'Folk', 'Pop', 'Rock']
+========First Hop=========
+[2024/11/10 15:04:59] Processing term [Classical music], progress 1/10
+[2024/11/10 15:05:00] Processing term [Pop music], progress 2/10
+[2024/11/10 15:05:01] Processing term [Hip hop], progress 3/10
+[2024/11/10 15:05:02] Processing term [Jazz music], progress 4/10
+[2024/11/10 15:05:03] Processing term [Rock music], progress 5/10
+[2024/11/10 15:05:04] Processing term [Folk music], progress 6/10
+[2024/11/10 15:05:05] Processing term [Classical], progress 7/10
+[2024/11/10 15:05:07] Processing term [Folk], progress 8/10
+[2024/11/10 15:05:08] Processing term [Pop], progress 9/10
+[2024/11/10 15:05:10] Processing term [Rock], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========
+collected 10 terms: ['Classical', 'Pop', 'Jazz', 'Hip hop', 'Rock', 'Folk', 'Hip-hop', 'Rap', 'Electronic', 'Reggae']
+========First Hop=========
+[2024/11/10 15:08:43] Processing term [Classical], progress 1/10
+[2024/11/10 15:08:44] Processing term [Pop], progress 2/10
+[2024/11/10 15:08:45] Processing term [Jazz], progress 3/10
+[2024/11/10 15:08:46] Processing term [Hip hop], progress 4/10
+[2024/11/10 15:08:47] Processing term [Rock], progress 5/10
+[2024/11/10 15:08:48] Processing term [Folk], progress 6/10
+[2024/11/10 15:08:49] Processing term [Hip-hop], progress 7/10
+[2024/11/10 15:08:51] Processing term [Rap], progress 8/10
+[2024/11/10 15:08:52] Processing term [Electronic], progress 9/10
+collected 10 terms: ['भारतीय', 'क्लासिक', 'फ़िल्मी', 'गाने', 'सारेगमापधनी', 'तानसा', 'नीसारे', 'गमापा', 'माधनीसा', 'सापामगरे']
+========First Hop=========
+[2024/11/10 15:10:08] Processing term [भारतीय], progress 1/10
+[2024/11/10 15:10:09] Processing term [क्लासिक], progress 2/10
+[2024/11/10 15:10:10] Processing term [फ़िल्मी], progress 3/10
+[2024/11/10 15:10:11] Processing term [गाने], progress 4/10
+[2024/11/10 15:10:12] Processing term [सारेगमापधनी], progress 5/10
+[2024/11/10 15:10:13] Processing term [तानसा], progress 6/10
+[2024/11/10 15:10:15] Processing term [नीसारे], progress 7/10
+[2024/11/10 15:10:16] Processing term [गमापा], progress 8/10
+[2024/11/10 15:10:17] Processing term [माधनीसा], progress 9/10
+[2024/11/10 15:10:18] Processing term [सापामगरे], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========
+collected 10 terms: ['संगीत', 'सम्याक', 'पुर्णाहुति', 'अमृता', 'लिपिसेवन', 'सितार', 'तबला', 'सारंगी', 'श्रुति', 'वीणा']
+========First Hop=========
+[2024/11/10 15:15:12] Processing term [संगीत], progress 1/10
+[2024/11/10 15:15:13] Processing term [सम्याक], progress 2/10
+[2024/11/10 15:15:13] Processing term [पुर्णाहुति], progress 3/10
+[2024/11/10 15:15:14] Processing term [अमृता], progress 4/10
+[2024/11/10 15:15:14] Processing term [लिपिसेवन], progress 5/10
+[2024/11/10 15:15:15] Processing term [सितार], progress 6/10
+[2024/11/10 15:15:15] Processing term [तबला], progress 7/10
+[2024/11/10 15:15:16] Processing term [सारंगी], progress 8/10
+[2024/11/10 15:15:16] Processing term [श्रुति], progress 9/10
+[2024/11/10 15:15:17] Processing term [वीणा], progress 10/10
+
+
+
+========Second Hop=========
+
+
+
+========End=========
+collected 10 terms: ['I am sorry, but your request seems ambiguous. The term "संगीत" refers to music in Hindi, and UTF-16 encoding represents characters in a particular way. Can you please provide more context or specify exactly what you are looking for so that I can assist you better?', 'गीत', 'संगीत', 'संगीताथर्व', 'निनाद', 'सरगम', 'संगीतीय', 'संगीतकार', 'संगीतश', 'कागज']
+========First Hop=========
+[2024/11/10 15:34:48] Processing term [I am sorry, but your request seems ambiguous. The term "संगीत" refers to music in Hindi, and UTF-16 encoding represents characters in a particular way. Can you please provide more context or specify exactly what you are looking for so that I can assist you better?], progress 1/10
+[2024/11/10 15:34:51] Processing term [गीत], progress 2/10
+[2024/11/10 15:34:52] Processing term [संगीत], progress 3/10
+[2024/11/10 15:36:03] Processing term [संगीताथर्व], progress 4/10
+[2024/11/10 15:36:03] Processing term [निनाद], progress 5/10
+[2024/11/10 15:36:03] Processing term [सरगम], progress 6/10
+[2024/11/10 15:36:04] Processing term [संगीतीय], progress 7/10
+[2024/11/10 15:36:05] Processing term [संगीतकार], progress 8/10
+[2024/11/10 15:37:26] Processing term [संगीतश], progress 9/10
+[2024/11/10 15:37:27] Processing term [कागज], progress 10/10
+
+
+
+========Second Hop=========
+[2024/11/10 15:37:27] Processing [संगीतकार] qae_pairs, progress 0/1...
+[2024/11/10 15:37:27] generating second hop for ▁संगीत ▁, progress 0/1...
+
+
+
+========End=========
+collected 10 terms: ['क्लासिकल संगीत', 'फिल्मी संगीत', 'भजन', 'गीत', 'ग़ज़ल', 'भारतीय पॉप', '', 'I\'m sorry, I am not sure what you mean by "संगीत" in this context. Could you please provide more information or clarify your question?', 'I can provide a list of various genres of music in Hindi such as भजन', 'फ़िल्मी गीत']
+========First Hop=========
+[2024/11/10 16:54:32] Processing term [क्लासिकल संगीत], progress 1/10
+collected 10 terms: ['क्लासिकल', 'पॉप', 'रॉक', 'हिप हॉप', 'बांग्ला', 'भजन', 'गजल', 'भारतीय', 'लोक', '']
+========First Hop=========
+[2024/11/10 16:57:10] Processing term [क्लासिकल], progress 1/10
+[2024/11/10 16:57:10] Processing term [पॉप], progress 2/10
+[2024/11/10 16:57:11] Processing term [रॉक], progress 3/10
+[2024/11/10 16:57:11] Processing term [हिप हॉप], progress 4/10
+[2024/11/10 16:57:12] Processing term [बांग्ला], progress 5/10
+[2024/11/10 16:57:12] Processing term [भजन], progress 6/10
+[2024/11/10 16:57:13] Processing term [गजल], progress 7/10
+[2024/11/10 16:57:13] Processing term [भारतीय], progress 8/10

@@ -10,6 +10,9 @@ from statistics import mean
 from string import punctuation, whitespace, ascii_lowercase
 from typing import List, Tuple, Dict
 import nltk
+from inltk.inltk import setup 
+setup('hi') 
+from inltk.inltk import tokenize
 import numpy as np
 import spacy
 import torch
@@ -19,25 +22,18 @@ from collections import Counter
 import unidecode
 from tqdm import tqdm
 
-nlp = spacy.load("en_core_web_sm")
 # lemmatizer = nlp.get_pipe("lemmatizer")
 
 
 expanded_punc_and_whitespace = punctuation + whitespace + "-"
-ban_word = ['am', 'is', 'are', 'being', 'was', 'were', 'has', 'have', 'been', 'be', 'done', 'which', 'whom', 'what',
-            'when',
-            'why',
-            'how', 'do', 'did',
-            'almost',
-            'most', 'had', '\'t', '\'s',
-            'Am', 'Is', 'Are', 'Being', 'Was', 'Were', 'Has', 'Have', 'Been', 'Be', 'Done', 'Which', 'Whom', 'What',
-            'When',
-            'Why', 'How', 'Do', 'Did',
-            'Almost',
-            'Most', 'Had']
-MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
-DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
-DATE_PATTERN = r'(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\w*[, ]{1}\d{4}'
+
+ban_word = ['हूँ', 'है', 'हैं', 'होना', 'था', 'थे', 'था', 'थी', 'हो', 'किया', 'जो', 'किसे', 'क्या', 'कब', 'क्यों', 'कैसे', 'करना', 'किया', 'लगभग', 'अधिकांश', 'था', '\'t', '\'s', 'हूँ', 'है', 'हैं', 'होना', 'था', 'थे', 'था', 'थी', 'हो', 'किया', 'जो', 'किसे', 'क्या', 'कब', 'क्यों', 'कैसे', 'करना', 'किया', 'लगभग', 'अधिकांश', 'था']
+
+MONTHS = ['जनवरी', 'फरवरी', 'मार्च', 'अप्रैल', 'मई', 'जून', 'जुलाई', 'अगस्त', 'सितंबर', 'अक्टूबर', 'नवंबर', 'दिसंबर']
+
+DAYS = ['सोमवार', 'मंगलवार', 'बुधवार', 'गुरुवार', 'शुक्रवार', 'शनिवार', 'रविवार']
+
+DATE_PATTERN = r'(जन|फर|मार्च|अप्रैल|मई|जून|जुलाई|अग|सित|अक्ट|नव|दिस)\w*[, ]{1}\d{4}'
 
 DEFAULT_PATHS = {
     "hotpot-qa": "data/hotpot-qa",
@@ -83,12 +79,29 @@ DEFAULT_TEST_PATHS = {
     "grail-qa": "data/grail-qa/test.json",
 }
 
-stop_set = set(stopwords.words('english')).union(ban_word)
+stop_set = set([
+    "के", "का", "की", "से", "है", "हैं", "को", "में", "कि", "यह", "और", "इस", 
+    "पर", "इससे", "था", "थे", "तो", "भी", "नहीं", "हो", "जो", "कर", "लेकिन", 
+    "अपने", "द्वारा", "किया", "होता", "हुआ", "तक", "सकता", "रहा", "इसी", 
+    "इसे", "थी", "दो", "रहे", "करना", "सबसे", "तरह", "करके", "करे", "वह", 
+    "वे", "मगर", "कौन", "किस", "जैसे", "सभी", "व", "अब", "जब", "या", "यदि", 
+    "जैसा", "कुछ", "दूसरे", "अधिक", "कहीं", "बनी", "आप", "फिर", "थोड़ा", "अभी", 
+    "जाते", "उनके", "इन", "उन", "बाद", "इसका", "इन्हें", "इन्हों", "चुका", 
+    "इत्यादि", "जाता", "जाती", "जाते", "तुम", "आपको", "तब", "इसमें", "रखें", 
+    "का", "थे", "वर्ग", "कई", "थी", "गए", "उनका", "इन्हें", "इनका", "कुछ", 
+    "कुल", "एस", "रहा", "जिस", "एस", "जिन्हें", "तुम्हारा", "कैसे", "सकते", 
+    "सब", "दिया", "जाता", "उस", "अत", "पहले", "बनी", "इनका", "जिसे", "जाना", 
+    "अंदर", "उनको", "इससे", "लिए", "अपने", "साथ", "आज", "तक", "अधिकांश", "काफी", 
+    "द्वारा", "इसके", "उसके", "कुछ", "कहा", "हर", "जिन्होंने", "वह", "वही", 
+    "जिन", "जितना", "सकता", "करें", "उस", "उन", "नीचे", "बिना", "होती", "उसका", 
+    "सकती", "आज", "उन्हें", "उसके", "किसी", "होते", "बताया", "चाहिए", "मैं", 
+    "मेरा", "हम", "हमारा", "मुझे", "हमने", "मेरे", "हमारे"
+])
 
 
 
 def check_answer(text):
-    pattern = r"^(yes|no)[,.]?"
+    pattern = r"^(हाँ|नहीं)[,.]?"
     match = re.match(pattern, text, re.IGNORECASE)
     if match:
         answer = match.group(0).lower()  # Get the matched string in lowercase
@@ -97,9 +110,23 @@ def check_answer(text):
     else:
         return None
 
+import stanza
+
+stanza.download('hi')
+hnlp = stanza.Pipeline('hi')
 
 def lemmatize(text):
-    return " ".join([token.lemma_ for token in nlp(text)])
+    
+    # Process the text
+    doc = hnlp(text)
+    
+    # Extract lemmas
+    lemmas = []
+    for sent in doc.sentences:
+        for word in sent.words:
+            lemmas.append(word.lemma if word.lemma else word.text)
+    
+    return " ".join(lemmas)
 
 
 def process_an_item(sentence):
@@ -117,7 +144,7 @@ def process_an_item(sentence):
     sentence = re.sub(continuous_cap_words_pattern, "' '", sentence)
 
     # Tokenize, POS-tag, and extract named entities
-    tokens = nltk.word_tokenize(sentence)
+    tokens = tokenize(sentence, 'hi')
     postags = nltk.pos_tag(tokens)
     named_entities = nltk.ne_chunk(postags, binary=False)
 
@@ -164,7 +191,7 @@ def normalize_answer(s):
     """Lower text and remove punctuation, articles and extra whitespace."""
 
     def remove_articles(text):
-        return re.sub(r"\b(a|an|the)\b", " ", text)
+        return re.sub(r"\b(एक|यह|वह|इस|उस)\b", " ", text)
 
     def white_space_fix(text):
         return " ".join(text.split())
@@ -328,7 +355,7 @@ def setup_data_loader(data, seed: int = 42, max_num_worker: int = 2, batch_size:
 
     dataset = MyDataset(data)
 
-    dataloader = torch.utils.data.DataLoader(
+    dataloader = torch.utils.data.DataLoader(data_reader,
         dataset,
         shuffle=False,
         batch_size=batch_size,
